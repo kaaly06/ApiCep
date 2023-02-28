@@ -1,0 +1,8 @@
+https://cep.metoda.com.br/endereco/by-cep?cep=17210580
+https://cep.metoda.com.br/logradouro/br-bairro?id_cidade=4874&bairro=Jardim
+https://cep.metoda.com.br/cep/by-logradouro?logradouro=Rua
+https://cep.metoda.com.br/cidade/by-uf?uf=SP
+https://cep.metoda.com.br/bairro/by-cidade?id=4874
+
+ctrl + shift + i
+jason to c#
