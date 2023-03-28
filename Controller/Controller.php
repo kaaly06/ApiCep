@@ -5,7 +5,7 @@ use Exception;
 
 abstract class Controller
 {
-   public static function GetResponseAsJson($data)
+   public static function getResponseAsJson($data)
    {
      header("Access-Control-Allow-Origin: *");
      header("Content-Type:application/json; charset=utf-8");
@@ -15,7 +15,7 @@ abstract class Controller
       exit(json_encode($data));
    }
 
-   protected static function getExceptionsAsJSON(Exception $e)
+   protected static function getExceptionsAsJson(Exception $e)
    {
       $exception = [
          'message' => $e->getMessage(),
@@ -34,6 +34,19 @@ abstract class Controller
      header("Expires: Mom, 26 Jun 1997 05:00:00 GMT");
      header("Program: public");
      exit(json_encode($exception));
+   }
+
+   protected static function setResponseAsJson($data, $request_status = true)
+   {
+      $response = array('response_data' => $data, 'response_successful' => $request_status);
+
+      header("Access-Control-Allow-Origin: *");
+      header("Content-type: application/json; charset=utf-8");
+      header("Cache-Control: no-cache, must-revalidate");
+      header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+      header("Pragma: public");
+
+      exit(json_encode($response)); 
    }
 
    protected static function isGet()

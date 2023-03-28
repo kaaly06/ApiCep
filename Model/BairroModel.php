@@ -1,5 +1,5 @@
 <?php
-namespace APP\Model;
+namespace ApiCep\Model;
 
 class BairroModel extends BairroModel
 {

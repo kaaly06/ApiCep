@@ -1,9 +1,8 @@
 <?php
 
-namespace APP\Model;
+namespace ApiCep\Model;
 
-use app\DAO\EnderecoDAO;
-use App\Model\Model;
+use ApiCep\DAO\EnderecoDAO;
 use Exception;
 
 class EnderecoModel extends Model
@@ -41,7 +40,7 @@ class EnderecoModel extends Model
       }
      }
     
-     public function getBairroByIdCidade(int $id_cidade)
+     public function getBairrosByIdCidade(int $id_cidade)
      {
       try
       {
